@@ -1,7 +1,7 @@
 @import 'settings.js'
 
 function calculateMaximumBounds (layers) {
-  var maximumBounds = [
+  let maximumBounds = [
     {
       x: Number.MAX_VALUE,
       y: Number.MAX_VALUE
@@ -11,13 +11,13 @@ function calculateMaximumBounds (layers) {
       y: Number.MIN_VALUE
     }
   ]
-  var length = layers.length
-  var i = -1
+  const length = layers.length
+  let i = -1
   while (++i < length) {
-    var layer = layers[i]
-    var frame = layer.frame()
-    var x = frame.x()
-    var y = frame.y()
+    const layer = layers[i]
+    const frame = layer.frame()
+    const x = frame.x()
+    const y = frame.y()
     maximumBounds = [
       {
         x: Math.min(maximumBounds[0].x, x),
@@ -33,8 +33,8 @@ function calculateMaximumBounds (layers) {
 }
 
 function createSliceLayer (maximumBounds, layerName) {
-  var sliceLayer = MSSliceLayer.new()
-  var frame = sliceLayer.frame()
+  const sliceLayer = MSSliceLayer.new()
+  const frame = sliceLayer.frame()
   frame.setX(maximumBounds[0].x - Settings.padding)
   frame.setY(maximumBounds[0].y - Settings.padding)
   frame.setWidth(maximumBounds[1].x - maximumBounds[0].x + (2 * Settings.padding))
@@ -45,10 +45,10 @@ function createSliceLayer (maximumBounds, layerName) {
 }
 
 function onRun (context) {
-  var document = context.document
-  var page = document.currentPage()
-  var selectedLayers = context.selection
-  var layers = selectedLayers.length > 0 ? selectedLayers : page.layers()
+  const document = context.document
+  const page = document.currentPage()
+  const selectedLayers = context.selection
+  const layers = selectedLayers.length > 0 ? selectedLayers : page.layers()
   if (layers.length == 0) {
     return
   }
