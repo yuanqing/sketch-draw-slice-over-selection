@@ -1,4 +1,4 @@
 var Settings = {
-  sliceName: '@Bounds',
+  sliceName: '@SliceOverSelection',
   padding: 100
 }
