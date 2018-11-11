@@ -48,12 +48,13 @@ function onRun (context) {
   const document = context.document
   const page = document.currentPage()
   const selectedLayers = context.selection
-  const layers = selectedLayers.length > 0 ? selectedLayers : page.layers()
+  const hasSelection = selectedLayers.length > 0
+  const layers = hasSelection ? selectedLayers : page.layers()
   if (layers.length == 0) {
     return
   }
   const maximumBounds = calculateMaximumBounds(layers)
   const sliceLayer = createSliceLayer(maximumBounds, Settings.sliceName)
   page.addLayers([sliceLayer])
-  document.showMessage('Drew Slice around selection')
+  document.showMessage(hasSelection ? 'Drew Slice over selection' : 'Drew Slice over all layers')
 }
