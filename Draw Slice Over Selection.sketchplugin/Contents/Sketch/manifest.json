@@ -11,7 +11,7 @@
   "commands": [
     {
       "name": "Draw Slice Over Selection",
-      "identifier": "draw-slice-over-selection",
+      "identifier": "yuanqing.draw-slice-over-selection",
       "description": "Draw a slice over the selection",
       "script": "draw-slice-over-selection.js",
       "shortcut": "ctrl option cmd l"
@@ -20,7 +20,7 @@
   "menu": {
     "isRoot": true,
     "items": [
-      "draw-slice-over-selection"
+      "yuanqing.draw-slice-over-selection"
     ]
   }
 }

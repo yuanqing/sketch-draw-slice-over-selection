@@ -1,4 +1,7 @@
-@import 'settings.js'
+/* eslint-disable eqeqeq */
+
+const LAYER_NAME = '@SliceOverSelection'
+const PADDING = 100
 
 function calculateMaximumBounds (layers) {
   let maximumBounds = [
@@ -21,25 +24,25 @@ function calculateMaximumBounds (layers) {
     maximumBounds = [
       {
         x: Math.min(maximumBounds[0].x, x),
-        y: Math.min(maximumBounds[0].y, y),
+        y: Math.min(maximumBounds[0].y, y)
       },
       {
         x: Math.max(maximumBounds[1].x, x + frame.width()),
-        y: Math.max(maximumBounds[1].y, y + frame.height()),
+        y: Math.max(maximumBounds[1].y, y + frame.height())
       }
     ]
   }
   return maximumBounds
 }
 
-function createSliceLayer (maximumBounds, layerName) {
+function createSliceLayer (maximumBounds) {
   const sliceLayer = MSSliceLayer.new()
   const frame = sliceLayer.frame()
-  frame.setX(maximumBounds[0].x - Settings.padding)
-  frame.setY(maximumBounds[0].y - Settings.padding)
-  frame.setWidth(maximumBounds[1].x - maximumBounds[0].x + (2 * Settings.padding))
-  frame.setHeight(maximumBounds[1].y - maximumBounds[0].y + (2 * Settings.padding))
-  sliceLayer.setName(layerName)
+  frame.setX(maximumBounds[0].x - PADDING)
+  frame.setY(maximumBounds[0].y - PADDING)
+  frame.setWidth(maximumBounds[1].x - maximumBounds[0].x + 2 * PADDING)
+  frame.setHeight(maximumBounds[1].y - maximumBounds[0].y + 2 * PADDING)
+  sliceLayer.setName(LAYER_NAME)
   sliceLayer.setIsLocked(true)
   return sliceLayer
 }
@@ -54,7 +57,11 @@ function onRun (context) {
     return
   }
   const maximumBounds = calculateMaximumBounds(layers)
-  const sliceLayer = createSliceLayer(maximumBounds, Settings.sliceName)
+  const sliceLayer = createSliceLayer(maximumBounds)
   page.addLayers([sliceLayer])
-  document.showMessage(hasSelection ? 'Drew Slice over selection' : 'Drew Slice over all layers')
+  document.showMessage(
+    hasSelection ? 'Drew Slice over selection' : 'Drew Slice over all layers'
+  )
 }
+
+module.exports = onRun
