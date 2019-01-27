@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "chokidar-cli": "^1.2.1",
+    "prettier-standard": "^9.1.1",
+    "standard": "^12.0.1"
+  },
+  "scripts": {
+    "copy": "rm -rf ~/Library/Application\\ Support/com.bohemiancoding.sketch3/Plugins/Draw\\ Slice\\ Over\\ Selection.sketchplugin && cp -R ./Draw\\ Slice\\ Over\\ Selection.sketchplugin ~/Library/Application\\ Support/com.bohemiancoding.sketch3/Plugins",
+    "fix": "prettier-standard '*.sketchplugin/**/*.js'",
+    "lint": "standard '*.sketchplugin/**/*.js'",
+    "watch": "chokidar './Draw Slice Over Selection.sketchplugin/**/*' --command 'yarn copy' --initial"
+  },
+  "standard": {
+    "globals": [
+      "MSSliceLayer"
+    ]
+  }
+}
