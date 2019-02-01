@@ -15,12 +15,19 @@
       "description": "Draw a slice over the selection",
       "script": "draw-slice-over-selection.js",
       "shortcut": "ctrl option cmd l"
+    },
+    {
+      "name": "Settings",
+      "identifier": "yuanqing.draw-slice-over-selection.settings",
+      "description": "Settings for Draw Slice Over Selection",
+      "script": "settings/settings.js"
     }
   ],
   "menu": {
-    "isRoot": true,
+    "title": "Draw Slice Over Selection",
     "items": [
-      "yuanqing.draw-slice-over-selection"
+      "yuanqing.draw-slice-over-selection",
+      "yuanqing.draw-slice-over-selection.settings"
     ]
   }
 }

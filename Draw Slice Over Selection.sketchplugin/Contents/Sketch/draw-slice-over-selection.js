@@ -1,7 +1,7 @@
 /* eslint-disable eqeqeq */
 
-const LAYER_NAME = '@SliceOverSelection'
-const PADDING = 100
+const config = require('./config')
+const readSettings = require('./settings/read-settings')
 
 function calculateMaximumBounds (layers) {
   let maximumBounds = [
@@ -35,14 +35,36 @@ function calculateMaximumBounds (layers) {
   return maximumBounds
 }
 
-function createSliceLayer (maximumBounds) {
+function hexToRGB (hex) {
+  return {
+    r: parseInt(hex.substr(1, 2), 16),
+    g: parseInt(hex.substr(3, 2), 16),
+    b: parseInt(hex.substr(5, 2), 16)
+  }
+}
+
+function createSliceLayer (settings, maximumBounds) {
   const sliceLayer = MSSliceLayer.new()
   const frame = sliceLayer.frame()
-  frame.setX(maximumBounds[0].x - PADDING)
-  frame.setY(maximumBounds[0].y - PADDING)
-  frame.setWidth(maximumBounds[1].x - maximumBounds[0].x + 2 * PADDING)
-  frame.setHeight(maximumBounds[1].y - maximumBounds[0].y + 2 * PADDING)
-  sliceLayer.setName(LAYER_NAME)
+  const padding = settings.padding
+  frame.setX(maximumBounds[0].x - padding)
+  frame.setY(maximumBounds[0].y - padding)
+  frame.setWidth(maximumBounds[1].x - maximumBounds[0].x + 2 * padding)
+  frame.setHeight(maximumBounds[1].y - maximumBounds[0].y + 2 * padding)
+  const backgroundColor = settings.backgroundColor
+  if (backgroundColor != '' && backgroundColor.charAt(0) == '#') {
+    sliceLayer.hasBackgroundColor = true
+    const rgbColor = hexToRGB(backgroundColor)
+    sliceLayer.setBackgroundColor(
+      MSColor.colorWithRed_green_blue_alpha(
+        rgbColor.r / 255,
+        rgbColor.g / 255,
+        rgbColor.b / 255,
+        1
+      )
+    )
+  }
+  sliceLayer.setName(config.layerName)
   sliceLayer.setIsLocked(true)
   return sliceLayer
 }
@@ -50,6 +72,7 @@ function createSliceLayer (maximumBounds) {
 function onRun (context) {
   const document = context.document
   const page = document.currentPage()
+  const settings = readSettings(config.identifier, config.defaultSettings)
   const selectedLayers = context.selection
   const hasSelection = selectedLayers.length > 0
   const layers = hasSelection ? selectedLayers : page.layers()
@@ -57,7 +80,7 @@ function onRun (context) {
     return
   }
   const maximumBounds = calculateMaximumBounds(layers)
-  const sliceLayer = createSliceLayer(maximumBounds)
+  const sliceLayer = createSliceLayer(settings.values, maximumBounds)
   page.addLayers([sliceLayer])
   document.showMessage(
     hasSelection ? 'Drew Slice over selection' : 'Drew Slice over all layers'

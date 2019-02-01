@@ -12,7 +12,13 @@
   },
   "standard": {
     "globals": [
-      "MSSliceLayer"
+      "COSAlertWindow",
+      "MSColor",
+      "NSMakeRect",
+      "MSSliceLayer",
+      "NSTextField",
+      "NSUserDefaults",
+      "NSView"
     ]
   }
 }
