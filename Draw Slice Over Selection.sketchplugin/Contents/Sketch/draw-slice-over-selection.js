@@ -10,8 +10,8 @@ function calculateMaximumBounds (layers) {
       y: Number.MAX_VALUE
     },
     {
-      x: Number.MIN_VALUE,
-      y: Number.MIN_VALUE
+      x: -1 * Number.MAX_VALUE,
+      y: -1 * Number.MAX_VALUE
     }
   ]
   const length = layers.length
