@@ -6,6 +6,11 @@
     <description>A Sketch plugin to draw a Slice over the selection</description>
     <language>en</language>
     <item>
+      <title>v0.3.1</title>
+      <description>0.3.1</description>
+      <enclosure url="https://github.com/yuanqing/sketch-draw-slice-over-selection/archive/v0.3.1.zip" sparkle:version="0.3.1" />
+    </item>
+    <item>
       <title>v0.3.0</title>
       <description>0.3.0</description>
       <enclosure url="https://github.com/yuanqing/sketch-draw-slice-over-selection/archive/v0.3.0.zip" sparkle:version="0.3.0" />
