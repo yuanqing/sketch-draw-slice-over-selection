@@ -1,6 +1,6 @@
 # sketch-draw-slice-over-selection
 
-> A Sketch plugin to draw a Slice over the selection
+> A Sketch plugin to draw a slice over the selection
 
 ## Usage
 
