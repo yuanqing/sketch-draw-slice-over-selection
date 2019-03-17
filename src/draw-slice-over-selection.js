@@ -1,6 +1,6 @@
 const {
+  addLayersToPage,
   getAllLayers,
-  getPage,
   getSelectedLayers,
   openUserInputDialog,
   saveUserInput,
@@ -43,7 +43,7 @@ function drawSliceOverSelection () {
   const maximumBounds = calculateMaximumBounds(layers)
   const { backgroundColor, padding } = userInput
   const sliceLayer = createSliceLayer(backgroundColor, padding, maximumBounds)
-  getPage().sketchObject.addLayers([sliceLayer])
+  addLayersToPage([sliceLayer])
   showSuccessMessage(
     hasSelection ? 'Drew slice over selection' : 'Drew slice over all layers'
   )
