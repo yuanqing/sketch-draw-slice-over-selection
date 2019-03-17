@@ -18,9 +18,9 @@
     }
   ],
   "menu": {
-    "title": "Draw Slice Over Selection",
     "items": [
       "yuanqing.sketch-draw-slice-over-selection.draw-slice-over-selection"
-    ]
+    ],
+    "isRoot": true
   }
 }

@@ -1,8 +1,6 @@
-/* eslint-disable eqeqeq */
-
 const sliceLayerName = '@SliceOverSelection'
 
-function createSliceLayer ({ backgroundColor, padding }, maximumBounds) {
+function createSliceLayer (backgroundColor, padding, maximumBounds) {
   const sliceLayer = MSSliceLayer.new()
   const frame = sliceLayer.frame()
   frame.setX(maximumBounds[0].x - padding)

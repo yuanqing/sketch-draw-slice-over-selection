@@ -7,11 +7,11 @@
   "scripts": {
     "build": "sph build",
     "fix": "sph lint --fix",
-    "link": "sph link",
     "lint": "sph lint",
-    "unlink": "sph unlink",
+    "symlink": "sph symlink",
+    "unlink": "sph symlink --delete",
     "version": "sph version",
-    "watch": "sph watch"
+    "watch": "sph build --watch"
   },
   "sketch-plugin-helper": {
     "pluginName": "Draw Slice Over Selection",
@@ -26,15 +26,9 @@
         "shortcut": "ctrl option cmd l"
       }
     ],
-    "defaultSettings": {
+    "defaults": {
       "backgroundColor": "#f9f9f9",
       "padding": "100"
     }
-  },
-  "standard": {
-    "globals": [
-      "MSColor",
-      "MSSliceLayer"
-    ]
   }
 }
