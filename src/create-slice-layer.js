@@ -1,6 +1,6 @@
 const sliceLayerName = '@SliceOverSelection'
 
-function createSliceLayer (backgroundColor, padding, maximumBounds) {
+export default function createSliceLayer (backgroundColor, padding, maximumBounds) {
   const sliceLayer = MSSliceLayer.new()
   const frame = sliceLayer.frame()
   frame.setX(maximumBounds[0].x - padding)
@@ -31,5 +31,3 @@ function convertHexToRGB (hex) {
     b: parseInt(hex.substr(5, 2), 16)
   }
 }
-
-module.exports = createSliceLayer

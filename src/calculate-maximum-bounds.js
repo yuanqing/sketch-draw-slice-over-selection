@@ -1,4 +1,4 @@
-function calculateMaximumBounds (layers) {
+export default function calculateMaximumBounds (layers) {
   let maximumBounds = [
     {
       x: Number.MAX_VALUE,
@@ -24,5 +24,3 @@ function calculateMaximumBounds (layers) {
   })
   return maximumBounds
 }
-
-module.exports = calculateMaximumBounds

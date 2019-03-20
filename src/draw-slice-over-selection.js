@@ -1,4 +1,4 @@
-const {
+import {
   addLayersToPage,
   getAllLayers,
   getSelectedLayers,
@@ -7,10 +7,10 @@ const {
   showErrorMessage,
   showSuccessMessage,
   TEXT_BOX
-} = require('sketch-plugin-helper')
+} from 'sketch-plugin-helper'
 
-const calculateMaximumBounds = require('./calculate-maximum-bounds')
-const createSliceLayer = require('./create-slice-layer')
+import calculateMaximumBounds from './calculate-maximum-bounds'
+import createSliceLayer from './create-slice-layer'
 
 const userInputConfig = {
   title: 'Draw Slice Over Selection',
@@ -28,7 +28,7 @@ const userInputConfig = {
   ]
 }
 
-function drawSliceOverSelection () {
+export default function drawSliceOverSelection () {
   const userInput = openUserInputDialog(userInputConfig)
   if (userInput) {
     saveUserInput(userInput)
@@ -48,5 +48,3 @@ function drawSliceOverSelection () {
     hasSelection ? 'Drew slice over selection' : 'Drew slice over all layers'
   )
 }
-
-module.exports = drawSliceOverSelection
