@@ -11,7 +11,7 @@ export default function createSliceLayer (
   frame.setY(maximumBounds[0].y - padding)
   frame.setWidth(maximumBounds[1].x - maximumBounds[0].x + 2 * padding)
   frame.setHeight(maximumBounds[1].y - maximumBounds[0].y + 2 * padding)
-  if (backgroundColor != '' && backgroundColor.charAt(0) == '#') {
+  if (backgroundColor !== '' && backgroundColor.charAt(0) === '#') {
     sliceLayer.hasBackgroundColor = true
     const rgbColor = convertHexToRGB(backgroundColor)
     sliceLayer.setBackgroundColor(

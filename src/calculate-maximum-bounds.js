@@ -1,3 +1,5 @@
+import {getAbsoluteCoordinates} from 'sketch-plugin-helper'
+
 export default function calculateMaximumBounds (layers) {
   let maximumBounds = [
     {
@@ -10,7 +12,8 @@ export default function calculateMaximumBounds (layers) {
     }
   ]
   layers.forEach(function (layer) {
-    const { x, y, width, height } = layer.frame
+    const { width, height } = layer.frame
+    const { x, y } = getAbsoluteCoordinates(layer)
     maximumBounds = [
       {
         x: Math.min(maximumBounds[0].x, x),

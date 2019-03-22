@@ -15,7 +15,7 @@ export default function drawSliceOverSelection () {
   const selectedLayers = getSelectedLayers()
   const hasSelection = selectedLayers.length > 0
   const layers = hasSelection ? selectedLayers : getAllLayers()
-  if (layers.length == 0) {
+  if (layers.length === 0) {
     showErrorMessage('No layers')
     return
   }
