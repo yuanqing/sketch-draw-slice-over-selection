@@ -2,37 +2,16 @@ import {
   addLayersToPage,
   getAllLayers,
   getSelectedLayers,
-  openUserInputDialog,
-  saveUserInput,
+  getSavedUserInput,
   showErrorMessage,
-  showSuccessMessage,
-  TEXT_BOX
+  showSuccessMessage
 } from 'sketch-plugin-helper'
 
 import calculateMaximumBounds from './calculate-maximum-bounds'
 import createSliceLayer from './create-slice-layer'
 
-const userInputConfig = {
-  title: 'Draw Slice Over Selection',
-  inputs: [
-    {
-      key: 'backgroundColor',
-      label: 'Background Color',
-      type: TEXT_BOX
-    },
-    {
-      key: 'padding',
-      label: 'Padding',
-      type: TEXT_BOX
-    }
-  ]
-}
-
 export default function drawSliceOverSelection () {
-  const userInput = openUserInputDialog(userInputConfig)
-  if (userInput) {
-    saveUserInput(userInput)
-  }
+  const userInput = getSavedUserInput()
   const selectedLayers = getSelectedLayers()
   const hasSelection = selectedLayers.length > 0
   const layers = hasSelection ? selectedLayers : getAllLayers()

@@ -15,12 +15,19 @@
       "script": "plugin.js",
       "shortcut": "ctrl option cmd l",
       "handler": "draw-slice-over-selection"
+    },
+    {
+      "name": "Settings",
+      "identifier": "yuanqing.sketch-draw-slice-over-selection.settings",
+      "script": "plugin.js",
+      "handler": "settings"
     }
   ],
   "menu": {
+    "title": "Draw Slice Over Selection",
     "items": [
-      "yuanqing.sketch-draw-slice-over-selection.draw-slice-over-selection"
-    ],
-    "isRoot": true
+      "yuanqing.sketch-draw-slice-over-selection.draw-slice-over-selection",
+      "yuanqing.sketch-draw-slice-over-selection.settings"
+    ]
   }
 }

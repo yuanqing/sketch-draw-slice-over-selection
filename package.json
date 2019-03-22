@@ -24,11 +24,15 @@
         "handler": "draw-slice-over-selection",
         "label": "Draw Slice Over Selection",
         "shortcut": "ctrl option cmd l"
+      },
+      {
+        "handler": "settings",
+        "label": "Settings"
       }
     ],
     "defaults": {
       "backgroundColor": "#f9f9f9",
-      "padding": "100"
+      "padding": 100
     }
   }
 }
