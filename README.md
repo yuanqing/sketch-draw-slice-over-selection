@@ -9,6 +9,11 @@
 - Draws a slice around the selection, or over all layers on the current page if the selection is empty
 - The slice is given the name `@SliceOverSelection`
 
+Settings | Default
+:--|:--
+Background color (hex code) | `#f9f9f9`
+Padding (pixels) | `100`
+
 ## Installation
 
 1. [Download and unzip the latest release.](https://github.com/yuanqing/sketch-draw-slice-over-selection/releases)
