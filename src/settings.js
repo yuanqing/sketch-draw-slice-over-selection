@@ -23,6 +23,6 @@ const userInputConfig = {
 export default function settings () {
   const userInput = openUserInputDialog(userInputConfig)
   if (userInput) {
-    saveUserInput(userInput, {successMessage: 'Settings saved'})
+    saveUserInput(userInput, { successMessage: 'Settings saved' })
   }
 }

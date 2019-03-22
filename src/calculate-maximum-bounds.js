@@ -1,4 +1,4 @@
-import {getAbsoluteCoordinates} from 'sketch-plugin-helper'
+import { getAbsoluteCoordinates } from 'sketch-plugin-helper'
 
 export default function calculateMaximumBounds (layers) {
   let maximumBounds = [
