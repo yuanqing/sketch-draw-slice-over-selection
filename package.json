@@ -22,8 +22,7 @@
     "menu": [
       {
         "handler": "draw-slice-over-selection",
-        "label": "Draw Slice Over Selection",
-        "shortcut": "ctrl option cmd l"
+        "label": "Draw Slice Over Selection"
       },
       "-",
       {

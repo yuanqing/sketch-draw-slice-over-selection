@@ -13,7 +13,6 @@
       "name": "Draw Slice Over Selection",
       "identifier": "yuanqing.sketch-draw-slice-over-selection.draw-slice-over-selection",
       "script": "plugin.js",
-      "shortcut": "ctrl option cmd l",
       "handler": "draw-slice-over-selection"
     },
     {
