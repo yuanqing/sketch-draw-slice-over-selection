@@ -3,7 +3,7 @@
   "description": "A Sketch plugin to draw a slice over the selection",
   "author": "Lim Yuan Qing",
   "homepage": "https://github.com/yuanqing/sketch-draw-slice-over-selection",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "identifier": "yuanqing.sketch-draw-slice-over-selection",
   "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-draw-slice-over-selection/master/appcast.xml",
   "bundleVersion": 1,
