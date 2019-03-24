@@ -18,16 +18,30 @@
     },
     {
       "name": "Settings",
-      "identifier": "yuanqing.sketch-draw-slice-over-selection.settings",
+      "identifier": "yuanqing.sketch-draw-slice-over-selection.settings.settings",
       "script": "plugin.js",
-      "handler": "settings"
+      "handler": "settings/settings"
+    },
+    {
+      "name": "Reset Settings",
+      "identifier": "yuanqing.sketch-draw-slice-over-selection.settings.reset-settings",
+      "script": "plugin.js",
+      "handler": "settings/reset-settings"
     }
   ],
   "menu": {
     "title": "Draw Slice Over Selection",
     "items": [
       "yuanqing.sketch-draw-slice-over-selection.draw-slice-over-selection",
-      "yuanqing.sketch-draw-slice-over-selection.settings"
+      "-",
+      {
+        "title": "Settings",
+        "items": [
+          "yuanqing.sketch-draw-slice-over-selection.settings.settings",
+          "-",
+          "yuanqing.sketch-draw-slice-over-selection.settings.reset-settings"
+        ]
+      }
     ]
   }
 }

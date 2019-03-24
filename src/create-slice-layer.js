@@ -1,4 +1,4 @@
-const sliceLayerName = '@SliceOverSelection'
+const layerName = '@SliceOverSelection'
 
 export default function createSliceLayer (
   backgroundColor,
@@ -23,7 +23,7 @@ export default function createSliceLayer (
       )
     )
   }
-  sliceLayer.setName(sliceLayerName)
+  sliceLayer.setName(layerName)
   sliceLayer.setIsLocked(true)
   return sliceLayer
 }
