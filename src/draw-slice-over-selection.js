@@ -21,7 +21,11 @@ export default function drawSliceOverSelection () {
   }
   const maximumBounds = calculateMaximumBounds(layers)
   const { backgroundColor, padding } = settings
-  const sliceLayer = createSliceLayer(backgroundColor, padding, maximumBounds)
+  const sliceLayer = createSliceLayer({
+    maximumBounds,
+    backgroundColor,
+    padding
+  })
   addLayersToPage([sliceLayer])
   showSuccessMessage(
     hasSelection ? 'Drew slice over selection' : 'Drew slice over all layers'

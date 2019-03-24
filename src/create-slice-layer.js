@@ -1,10 +1,10 @@
 const layerName = '@SliceOverSelection'
 
-export default function createSliceLayer (
+export default function createSliceLayer ({
+  maximumBounds,
   backgroundColor,
-  padding,
-  maximumBounds
-) {
+  padding
+}) {
   const sliceLayer = MSSliceLayer.new()
   const frame = sliceLayer.frame()
   frame.setX(maximumBounds[0].x - padding)
