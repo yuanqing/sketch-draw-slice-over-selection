@@ -7,7 +7,6 @@
 <kbd>⌘</kbd> <kbd>Ctrl</kbd> <kbd>Option</kbd> <kbd>L</kbd>
 
 - Draws a slice around the selection, or over all layers on the current page if the selection is empty
-- The slice is given the name `@SliceOverSelection`
 
 Settings | Default
 :--|:--
