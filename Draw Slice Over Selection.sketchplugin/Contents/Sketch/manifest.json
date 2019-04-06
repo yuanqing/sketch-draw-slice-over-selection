@@ -11,9 +11,9 @@
   "commands": [
     {
       "name": "Draw Slice Over Selection",
-      "identifier": "yuanqing.sketch-draw-slice-over-selection.draw-slice-over-selection",
+      "identifier": "yuanqing.sketch-draw-slice-over-selection.draw-slice-over-selection.draw-slice-over-selection",
       "script": "plugin.js",
-      "handler": "draw-slice-over-selection"
+      "handler": "draw-slice-over-selection/draw-slice-over-selection"
     },
     {
       "name": "Settings",
@@ -31,7 +31,7 @@
   "menu": {
     "title": "Draw Slice Over Selection",
     "items": [
-      "yuanqing.sketch-draw-slice-over-selection.draw-slice-over-selection",
+      "yuanqing.sketch-draw-slice-over-selection.draw-slice-over-selection.draw-slice-over-selection",
       "-",
       {
         "title": "Settings",
