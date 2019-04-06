@@ -1,4 +1,8 @@
-import { getDefaultSettings, snapshotTest, findLayersByName } from 'sketch-plugin-helper'
+import {
+  getDefaultSettings,
+  snapshotTest,
+  findLayersByName
+} from 'sketch-plugin-helper'
 import drawSliceOverSelection from '../draw-slice-over-selection'
 
 snapshotTest(
@@ -6,7 +10,7 @@ snapshotTest(
   '__fixtures__/input.sketch',
   '__fixtures__/selection.sketch',
   function () {
-    findLayersByName('Artboard').forEach(function(layer) {
+    findLayersByName('Artboard').forEach(function (layer) {
       layer.selected = true
     })
     drawSliceOverSelection({ settings: getDefaultSettings() })

@@ -10,7 +10,7 @@ import {
 import calculateMaximumBounds from './calculate-maximum-bounds'
 import createSliceLayer from './create-slice-layer'
 
-export default function drawSliceOverSelection ({settings}) {
+export default function drawSliceOverSelection ({ settings }) {
   settings = settings || getSettings()
   const selectedLayers = getSelectedLayers()
   const hasSelection = selectedLayers.length > 0
