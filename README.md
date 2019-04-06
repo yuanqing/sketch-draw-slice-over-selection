@@ -1,4 +1,4 @@
-# sketch-draw-slice-over-selection
+# Draw Slice Over Selection
 
 > A Sketch plugin to draw a slice over the selection
 
@@ -13,8 +13,8 @@ Padding (pixels) | `100`
 
 ## Installation
 
-1. [Download and unzip the latest release.](https://github.com/yuanqing/sketch-draw-slice-over-selection/releases)
-2. Double-click `Draw Slice Over Selection.sketchplugin` to install.
+1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-draw-slice-over-selection/releases)
+2. Double-click `Draw Slice Over Selection.sketchplugin` to install
 
 ## License
 
