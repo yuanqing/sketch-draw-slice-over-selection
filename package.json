@@ -9,6 +9,7 @@
     "fix": "sph lint --fix",
     "lint": "sph lint",
     "symlink": "sph symlink",
+    "test": "sph test",
     "unlink": "sph symlink --delete",
     "version": "sph version",
     "watch": "sph build --watch"
@@ -21,7 +22,7 @@
     "githubRepositoryName": "sketch-draw-slice-over-selection",
     "menu": [
       {
-        "handler": "draw-slice-over-selection",
+        "handler": "draw-slice-over-selection/draw-slice-over-selection",
         "label": "Draw Slice Over Selection"
       },
       "-",
