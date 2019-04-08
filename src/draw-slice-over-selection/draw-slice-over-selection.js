@@ -1,6 +1,6 @@
 import {
-  addLayersToPage,
-  getAllLayers,
+  addLayersToCurrentPage,
+  getLayersOnCurrentPage,
   getSelectedLayers,
   getSettings,
   showErrorMessage,
@@ -14,7 +14,7 @@ export default function drawSliceOverSelection ({ settings }) {
   settings = settings || getSettings()
   const selectedLayers = getSelectedLayers()
   const hasSelection = selectedLayers.length > 0
-  const layers = hasSelection ? selectedLayers : getAllLayers()
+  const layers = hasSelection ? selectedLayers : getLayersOnCurrentPage()
   if (layers.length === 0) {
     showErrorMessage('No layers')
     return
@@ -26,7 +26,7 @@ export default function drawSliceOverSelection ({ settings }) {
     backgroundColor,
     padding
   })
-  addLayersToPage([sliceLayer])
+  addLayersToCurrentPage([sliceLayer])
   showSuccessMessage(
     hasSelection ? 'Drew slice over selection' : 'Drew slice over all layers'
   )
