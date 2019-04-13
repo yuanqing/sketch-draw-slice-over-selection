@@ -1,6 +1,6 @@
 {
   "name": "sketch-draw-slice-over-selection",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "A Sketch plugin to draw a slice over the selection",
   "keywords": [
     "plugin",
