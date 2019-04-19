@@ -28,6 +28,6 @@ export default function drawSliceOverSelection ({ settings }) {
   })
   addLayersToCurrentPage([sliceLayer])
   showSuccessMessage(
-    hasSelection ? 'Drew slice over selection' : 'Drew slice over all layers'
+    `Drew slice over ${hasSelection ? 'selection' : 'all layers'}`
   )
 }
