@@ -6,7 +6,9 @@
 
 ![Draw Slice Over Selection](media/draw-slice-over-selection.gif)
 
-## Command
+## Commands
+
+### Draw Slice Over Selection
 
 - Draws a slice over the selection, or over all layers on the current page if the selection is empty
 
