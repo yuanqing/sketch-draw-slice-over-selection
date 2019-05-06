@@ -2,9 +2,13 @@
 
 > A Sketch plugin to draw a slice over the selection
 
-## Usage
+- Useful for preparing UX specifications for hand-off or for print
 
-- Draws a slice around the selection, or over all layers on the current page if the selection is empty
+![Draw Slice Over Selection](media/draw-slice-over-selection.gif)
+
+## Command
+
+- Draws a slice over the selection, or over all layers on the current page if the selection is empty
 
 Settings | Default
 :--|:--
