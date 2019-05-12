@@ -1,5 +1,5 @@
 import {
-  addLayersToCurrentPage,
+  addLayersToPage,
   getLayersOnCurrentPage,
   getSelectedLayers,
   getSettings,
@@ -26,7 +26,7 @@ export default function drawSliceOverSelection ({ settings }) {
     backgroundColor,
     padding
   })
-  addLayersToCurrentPage([sliceLayer])
+  addLayersToPage([sliceLayer])
   showSuccessMessage(
     `Drew slice over ${hasSelection ? 'selection' : 'all layers'}`
   )
