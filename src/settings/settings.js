@@ -1,13 +1,14 @@
 import {
   openSettingsDialog,
   saveSettings,
+  showSuccessMessage,
   NUMERIC_TEXT_BOX,
   TEXT_BOX
 } from 'sketch-plugin-helper'
 
 const settingsConfig = {
   title: 'Settings for Draw Slice Over Selection',
-  inputs: [
+  formFields: [
     {
       type: TEXT_BOX,
       key: 'backgroundColor',
@@ -24,6 +25,7 @@ const settingsConfig = {
 export default function settings () {
   const settings = openSettingsDialog(settingsConfig)
   if (settings) {
-    saveSettings(settings, { successMessage: 'Settings saved' })
+    saveSettings(settings)
+    showSuccessMessage('Saved settings')
   }
 }

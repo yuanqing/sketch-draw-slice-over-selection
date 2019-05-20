@@ -1,7 +1,4 @@
-import {
-  test,
-  findLayersByNameOnCurrentPage
-} from 'sketch-plugin-helper'
+import { test, findLayersByNameOnCurrentPage } from 'sketch-plugin-helper'
 import drawSliceOverSelection from '../draw-slice-over-selection'
 
 const settings = {
