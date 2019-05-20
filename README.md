@@ -1,4 +1,4 @@
-# Draw Slice Over Selection
+# Draw Slice Over Selection [![npm Version](https://badgen.net/npm/v/sketch-draw-slice-over-selection)](https://www.npmjs.org/package/sketch-draw-slice-over-selection)
 
 > A Sketch plugin to draw a slice over the selection
 
