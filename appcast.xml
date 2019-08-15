@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Draw Slice Over Selection</title>
-    <link>https://raw.githubusercontent.com/yuanqing/sketch-draw-slice-over-selection/master/appcast.xml</link>
+    <link>https://raw.githubusercontent.com/yuanqing/sketch-plugins/master/packages/sketch-draw-slice-over-selection/.appcast.xml</link>
     <description>A Sketch plugin to draw a slice over the selection</description>
     <language>en</language>
     <item>
